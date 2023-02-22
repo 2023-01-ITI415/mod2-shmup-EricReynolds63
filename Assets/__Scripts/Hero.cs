@@ -23,18 +23,18 @@ public class Hero : MonoBehaviour {
 	}
  
 	void Update () {
-         // Pull in information from the Input class
-         float hAxis = Input.GetAxis("Horizontal");
-         float vAxis = Input.GetAxis("Vertical");
+		// Pull in information from the Input class
+		float hAxis = Input.GetAxis("Horizontal");
+		float vAxis = Input.GetAxis("Vertical");
  
-         // Change transform.position based on the axes
-         Vector3 pos = transform.position;
-         pos.x += hAxis * speed * Time.deltaTime;
-         pos.y += vAxis * speed * Time.deltaTime;
-         transform.position = pos;
+		// Change transform.position based on the axes
+		Vector3 pos = transform.position;
+		pos.x += hAxis * speed * Time.deltaTime;
+		pos.y += vAxis * speed * Time.deltaTime;
+		transform.position = pos;
  
-         // Rotate the ship to make it feel more dynamic
-         transform.rotation = Quaternion.Euler(vAxis*pitchMult,hAxis*rollMult,0);
-     }
+		// Rotate the ship to make it feel more dynamic
+		transform.rotation = Quaternion.Euler(vAxis*pitchMult,hAxis*rollMult,0);
+	}
      
- }
+}
